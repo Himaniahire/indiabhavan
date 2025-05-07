@@ -26,7 +26,8 @@
             <div class="item">
                 <div class="slider_block">
                     <video autoplay muted loop id="background-video">
-                        <source src="{{asset('images/bhavan/vid.mp4')}}" type="video/mp4">
+                        <!--<source src="{{asset('images/bhavan/vid.mp4')}}" type="video/mp4">-->
+                        <source src="{{asset('images/bhavan/india-bhavan.mp4')}}" type="video/mp4">
                     </video>
                     <div class="ban_text">
                         <div class="inner_text">
@@ -61,23 +62,21 @@
                     </div>
                 </div>
             </div>
-            <div class="item">
-                <div class="slider_block" style="background-image: url({{asset('images/bhavan/four.jpeg')}});">
-                    <div class="ban_text">
-                        <div class="inner_text">
-                            <!-- <span class="sub_text">Welcome to <span class="brown">India Bhavan</span></span> -->
-                            <h1 style="text-transform: capitalize;">Welcome to <br><span class="brown">India Bhavan</span></h1>
-                            <!-- <p class="lead">~ Authentic Indian and Mediterrainanin Cuisine ~</p> -->
-                            <a href="{{route('reservation')}}" class="btn btn_primary">Reserve Your Table</a>
-                            <a href="https://order.toasttab.com/online/india-bhavan-belgard-square-west" target="_blank" class="btn btn_primary">Place Your Order</a>
-                            <div class="h-logo">
-                                <img src="{{asset('images/bhavan/halal-logo.png')}}" alt="" class="halal-logo">
-                                <h4 class="f-h">Halal Friendly</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!--<div class="item">-->
+            <!--    <div class="slider_block" style="background-image: url({{asset('images/bhavan/four.jpeg')}});">-->
+            <!--        <div class="ban_text">-->
+            <!--            <div class="inner_text">-->
+            <!--                <h1 style="text-transform: capitalize;">Welcome to <br><span class="brown">India Bhavan</span></h1>-->
+            <!--                <a href="{{route('reservation')}}" class="btn btn_primary">Reserve Your Table</a>-->
+            <!--                <a href="https://order.toasttab.com/online/india-bhavan-belgard-square-west" target="_blank" class="btn btn_primary">Place Your Order</a>-->
+            <!--                <div class="h-logo">-->
+            <!--                    <img src="{{asset('images/bhavan/halal-logo.png')}}" alt="" class="halal-logo">-->
+            <!--                    <h4 class="f-h">Halal Friendly</h4>-->
+            <!--                </div>-->
+            <!--            </div>-->
+            <!--        </div>-->
+            <!--    </div>-->
+            <!--</div>-->
         </div>
 
     </div>

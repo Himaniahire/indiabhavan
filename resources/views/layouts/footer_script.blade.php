@@ -202,22 +202,24 @@
                     $('#cust_time').removeClass('is-invalid');
                 }
 
-                if (dateValue === '') {
+               if (dateValue === '') {
                     isValid = false;
                     $('#cust_date').addClass('is-invalid').after('<div class="invalid-feedback">Please Enter Date.</div>');
-                } else {
-                    $('#cust_date').removeClass('is-invalid').next('.invalid-feedback').remove();
+                } 
+                // else {
+                //     $('#cust_date').removeClass('is-invalid').next('.invalid-feedback').remove();
+                
+                //     var selectedDate = new Date(dateValue);
+                //     var dayOfWeek = selectedDate.getDay(); // getDay() returns 0 for Sunday, 1 for Monday, etc.
+                
+                //     if (dayOfWeek === 1) { // 1 represents Monday
+                //         isValid = false;
+                //         $('#cust_date').addClass('is-invalid').after('<div class="invalid-feedback">We are Closed On Monday.</div>');
+                //     } else {
+                //         $('#cust_date').removeClass('is-invalid').next('.invalid-feedback').remove();
+                //     }
+                // }
 
-                    var selectedDate = new Date(dateValue);
-                    var dayOfWeek = selectedDate.getDay(); // getDay() returns 0 for Sunday, 1 for Monday, etc.
-
-                    if (dayOfWeek === 1) { // 1 represents Monday
-                        isValid = false;
-                        $('#cust_date').addClass('is-invalid').after('<div class="invalid-feedback">We are Closed On Monday.</div>');
-                    } else {
-                        $('#cust_date').removeClass('is-invalid').next('.invalid-feedback').remove();
-                    // }
-                }
 
                 if ($('#cust_guests').val() === '') {
                     isValid = false;

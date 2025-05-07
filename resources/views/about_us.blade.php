@@ -127,7 +127,7 @@
     <div class="chef_img">
         <img src="{{asset('images/bhavan/dark.png')}}" id="chef_img_id" alt="img">
     </div>
-    <video id="videoBlock" class="img-fluid videob" src="{{asset('images/bhavan/vid.mp4')}}" autoplay muted loop></video>
+    <video id="videoBlock" class="img-fluid videob" src="{{asset('images/bhavan/india-bhavan.mp4')}}" autoplay muted loop></video>
 </div>
 <!-- Video Section End -->
 

@@ -59,6 +59,7 @@ Route::group(['prefix' => '/admin'], function () {
         Route::get('testimonial_details', 'testimonialTable')->name('testimonial_details');
         Route::delete('testimonial_detail_destroy/{id}', 'testimonialDestroy')->name('testimonial_detail_destroy');
     });
+    Route::resource('/holidays', \App\Http\Controllers\HolidayController::class);
 
 });
 

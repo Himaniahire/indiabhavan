@@ -186,14 +186,6 @@
             isValid = false;
             date.addClass('is-invalid').after('<div class="invalid-feedback">Please Enter Date.</div>');
         }
-        // else {
-        //     var selectedDate = new Date(date.val());
-        //     var dayOfWeek = selectedDate.getDay();
-        //     if (dayOfWeek === 1) {
-        //         isValid = false;
-        //         date.addClass('is-invalid').after('<div class="invalid-feedback">We are Closed On Monday.</div>');
-        //     }
-        }
 
         // Guests Validation
         if (guests.val().trim() === '') {

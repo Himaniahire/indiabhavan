@@ -12,6 +12,7 @@ use App\Mail\ContactMail;
 use Facades\Label84\HoursHelper\HoursHelper;
 use Illuminate\Support\Collection;
 use Carbon\Carbon;
+use App\Models\Holiday;
 
 class UserController extends Controller
 {
@@ -46,23 +47,22 @@ class UserController extends Controller
     //     }
     $today_date = date('Y-m-d');
         $today_day = Carbon::parse($today_date)->format('l');
-    
+
         $week_days_array = ['Tuesday', 'Wednesday', 'Thursday'];
         $week_ends_array = ['Friday', 'Saturday'];
         $week_sunday_array = ['Sunday'];
-    
+
         function excludeTimes(Collection $hours, array $exclusions) {
             return $hours->filter(function($time) use ($exclusions) {
                 return !in_array($time, $exclusions);
             });
         }
-    
+
         // Default empty hours
         $hours = collect([]);
-    
+
         // Special date override
-        if ($today_date == '2025-03-17') {
-            // Allow booking on Monday (17-03-2025) with custom hours if needed
+        if (Holiday::where('date', $today_date)->exists()) {
             $hours = HoursHelper::create('10:30', '23:00', 30, 'H:i');
             $exclusions = ['15:00', '15:30'];
             $hours = excludeTimes($hours, $exclusions);
@@ -88,23 +88,22 @@ class UserController extends Controller
     {
         $today_date = date('Y-m-d');
         $today_day = Carbon::parse($today_date)->format('l');
-    
+
         $week_days_array = ['Tuesday', 'Wednesday', 'Thursday'];
         $week_ends_array = ['Friday', 'Saturday'];
         $week_sunday_array = ['Sunday'];
-    
+
         function excludeTimes(Collection $hours, array $exclusions) {
             return $hours->filter(function($time) use ($exclusions) {
                 return !in_array($time, $exclusions);
             });
         }
-    
+
         // Default empty hours
         $hours = collect([]);
-    
+
         // Special date override
-        if ($today_date == '2025-03-17') {
-            // Allow booking on Monday (17-03-2025) with custom hours if needed
+        if (Holiday::where('date', $today_date)->exists()) {
             $hours = HoursHelper::create('10:30', '23:00', 30, 'H:i');
             $exclusions = ['15:00', '15:30'];
             $hours = excludeTimes($hours, $exclusions);
@@ -129,23 +128,22 @@ class UserController extends Controller
     {
         $today_date = date('Y-m-d');
         $today_day = Carbon::parse($today_date)->format('l');
-    
+
         $week_days_array = ['Tuesday', 'Wednesday', 'Thursday'];
         $week_ends_array = ['Friday', 'Saturday'];
         $week_sunday_array = ['Sunday'];
-    
+
         function excludeTimes(Collection $hours, array $exclusions) {
             return $hours->filter(function($time) use ($exclusions) {
                 return !in_array($time, $exclusions);
             });
         }
-    
+
         // Default empty hours
         $hours = collect([]);
-    
+
         // Special date override
-        if ($today_date == '2025-03-17') {
-            // Allow booking on Monday (17-03-2025) with custom hours if needed
+        if (Holiday::where('date', $today_date)->exists()) {
             $hours = HoursHelper::create('10:30', '23:00', 30, 'H:i');
             $exclusions = ['15:00', '15:30'];
             $hours = excludeTimes($hours, $exclusions);
@@ -193,23 +191,22 @@ class UserController extends Controller
     {
         $today_date = date('Y-m-d');
         $today_day = Carbon::parse($today_date)->format('l');
-    
+
         $week_days_array = ['Tuesday', 'Wednesday', 'Thursday'];
         $week_ends_array = ['Friday', 'Saturday'];
         $week_sunday_array = ['Sunday'];
-    
+
         function excludeTimes(Collection $hours, array $exclusions) {
             return $hours->filter(function($time) use ($exclusions) {
                 return !in_array($time, $exclusions);
             });
         }
-    
+
         // Default empty hours
         $hours = collect([]);
-    
+
         // Special date override
-        if ($today_date == '2025-03-17') {
-            // Allow booking on Monday (17-03-2025) with custom hours if needed
+        if (Holiday::where('date', $today_date)->exists()) {
             $hours = HoursHelper::create('10:30', '23:00', 30, 'H:i');
             $exclusions = ['15:00', '15:30'];
             $hours = excludeTimes($hours, $exclusions);
@@ -234,23 +231,22 @@ class UserController extends Controller
     {
         $today_date = date('Y-m-d');
         $today_day = Carbon::parse($today_date)->format('l');
-    
+
         $week_days_array = ['Tuesday', 'Wednesday', 'Thursday'];
         $week_ends_array = ['Friday', 'Saturday'];
         $week_sunday_array = ['Sunday'];
-    
+
         function excludeTimes(Collection $hours, array $exclusions) {
             return $hours->filter(function($time) use ($exclusions) {
                 return !in_array($time, $exclusions);
             });
         }
-    
+
         // Default empty hours
         $hours = collect([]);
-    
+
         // Special date override
-        if ($today_date == '2025-03-17') {
-            // Allow booking on Monday (17-03-2025) with custom hours if needed
+        if (Holiday::where('date', $today_date)->exists()) {
             $hours = HoursHelper::create('10:30', '23:00', 30, 'H:i');
             $exclusions = ['15:00', '15:30'];
             $hours = excludeTimes($hours, $exclusions);
@@ -275,23 +271,22 @@ class UserController extends Controller
     {
         $today_date = date('Y-m-d');
         $today_day = Carbon::parse($today_date)->format('l');
-    
+
         $week_days_array = ['Tuesday', 'Wednesday', 'Thursday'];
         $week_ends_array = ['Friday', 'Saturday'];
         $week_sunday_array = ['Sunday'];
-    
+
         function excludeTimes(Collection $hours, array $exclusions) {
             return $hours->filter(function($time) use ($exclusions) {
                 return !in_array($time, $exclusions);
             });
         }
-    
+
         // Default empty hours
         $hours = collect([]);
-    
+
         // Special date override
-        if ($today_date == '2025-03-17') {
-            // Allow booking on Monday (17-03-2025) with custom hours if needed
+        if (Holiday::where('date', $today_date)->exists()) {
             $hours = HoursHelper::create('10:30', '23:00', 30, 'H:i');
             $exclusions = ['15:00', '15:30'];
             $hours = excludeTimes($hours, $exclusions);
@@ -316,23 +311,22 @@ class UserController extends Controller
     {
         $today_date = date('Y-m-d');
         $today_day = Carbon::parse($today_date)->format('l');
-    
+
         $week_days_array = ['Tuesday', 'Wednesday', 'Thursday'];
         $week_ends_array = ['Friday', 'Saturday'];
         $week_sunday_array = ['Sunday'];
-    
+
         function excludeTimes(Collection $hours, array $exclusions) {
             return $hours->filter(function($time) use ($exclusions) {
                 return !in_array($time, $exclusions);
             });
         }
-    
+
         // Default empty hours
         $hours = collect([]);
-    
+
         // Special date override
-        if ($today_date == '2025-03-17') {
-            // Allow booking on Monday (17-03-2025) with custom hours if needed
+        if (Holiday::where('date', $today_date)->exists()) {
             $hours = HoursHelper::create('10:30', '23:00', 30, 'H:i');
             $exclusions = ['15:00', '15:30'];
             $hours = excludeTimes($hours, $exclusions);
@@ -357,23 +351,22 @@ class UserController extends Controller
     {
         $today_date = date('Y-m-d');
         $today_day = Carbon::parse($today_date)->format('l');
-    
+
         $week_days_array = ['Tuesday', 'Wednesday', 'Thursday'];
         $week_ends_array = ['Friday', 'Saturday'];
         $week_sunday_array = ['Sunday'];
-    
+
         function excludeTimes(Collection $hours, array $exclusions) {
             return $hours->filter(function($time) use ($exclusions) {
                 return !in_array($time, $exclusions);
             });
         }
-    
+
         // Default empty hours
         $hours = collect([]);
-    
+
         // Special date override
-        if ($today_date == '2025-03-17') {
-            // Allow booking on Monday (17-03-2025) with custom hours if needed
+        if (Holiday::where('date', $today_date)->exists()) {
             $hours = HoursHelper::create('10:30', '23:00', 30, 'H:i');
             $exclusions = ['15:00', '15:30'];
             $hours = excludeTimes($hours, $exclusions);
@@ -398,23 +391,22 @@ class UserController extends Controller
     {
         $today_date = date('Y-m-d');
         $today_day = Carbon::parse($today_date)->format('l');
-    
+
         $week_days_array = ['Tuesday', 'Wednesday', 'Thursday'];
         $week_ends_array = ['Friday', 'Saturday'];
         $week_sunday_array = ['Sunday'];
-    
+
         function excludeTimes(Collection $hours, array $exclusions) {
             return $hours->filter(function($time) use ($exclusions) {
                 return !in_array($time, $exclusions);
             });
         }
-    
+
         // Default empty hours
         $hours = collect([]);
-    
+
         // Special date override
-        if ($today_date == '2025-03-17') {
-            // Allow booking on Monday (17-03-2025) with custom hours if needed
+        if (Holiday::where('date', $today_date)->exists()) {
             $hours = HoursHelper::create('10:30', '23:00', 30, 'H:i');
             $exclusions = ['15:00', '15:30'];
             $hours = excludeTimes($hours, $exclusions);
@@ -432,7 +424,7 @@ class UserController extends Controller
             $hours = HoursHelper::create('10:30', '23:00', 30, 'H:i');
             // No exclusions for Sunday
         }
-    
+
         return view('reservation', compact('hours'));
     }
 
@@ -451,6 +443,16 @@ class UserController extends Controller
 
         // Check if selected date is Monday
          $bookingDate = Carbon::parse($request->date);
+         if ($bookingDate->dayOfWeek === Carbon::MONDAY) {
+            $holiday = Holiday::whereDate('date', $bookingDate->toDateString())
+                              ->where('is_booking', 1)
+                              ->first();
+
+            // Show danger only if the Monday is NOT marked as bookable
+            if (!$holiday) {
+                return redirect()->back()->with('danger', 'We are closed on Mondays. But we are open on Bank Holiday Mondays.');
+            }
+        }
         // Check if total guests exceed 20 for the given time slot
         $startTime = Carbon::parse($request->time);
         $endTime = $startTime->copy()->addHours(2);
@@ -486,28 +488,26 @@ class UserController extends Controller
     {
         $today_date = date('Y-m-d');
         $today_day = Carbon::parse($today_date)->format('l');
-    
+
         $week_days_array = ['Tuesday', 'Wednesday', 'Thursday'];
         $week_ends_array = ['Friday', 'Saturday'];
         $week_sunday_array = ['Sunday'];
-    
+
         function excludeTimes(Collection $hours, array $exclusions) {
             return $hours->filter(function($time) use ($exclusions) {
                 return !in_array($time, $exclusions);
             });
         }
-    
+
         // Default empty hours
         $hours = collect([]);
-    
+
         // Special date override
-        if ($today_date == '2025-03-17') {
-            // Allow booking on Monday (17-03-2025) with custom hours if needed
+        if (Holiday::where('date', $today_date)->exists()) {
             $hours = HoursHelper::create('10:30', '23:00', 30, 'H:i');
             $exclusions = ['15:00', '15:30'];
             $hours = excludeTimes($hours, $exclusions);
         }
-        // Normal logic
         elseif (in_array($today_day, $week_ends_array)) {
             $hours = HoursHelper::create('10:30', '24:00', 30, 'H:i');
             $exclusions = ['15:00', '15:30'];
@@ -542,23 +542,22 @@ class UserController extends Controller
     {
         $today_date = date('Y-m-d');
         $today_day = Carbon::parse($today_date)->format('l');
-    
+
         $week_days_array = ['Tuesday', 'Wednesday', 'Thursday'];
         $week_ends_array = ['Friday', 'Saturday'];
         $week_sunday_array = ['Sunday'];
-    
+
         function excludeTimes(Collection $hours, array $exclusions) {
             return $hours->filter(function($time) use ($exclusions) {
                 return !in_array($time, $exclusions);
             });
         }
-    
+
         // Default empty hours
         $hours = collect([]);
-    
+
         // Special date override
-        if ($today_date == '2025-03-17') {
-            // Allow booking on Monday (17-03-2025) with custom hours if needed
+        if (Holiday::where('date', $today_date)->exists()) {
             $hours = HoursHelper::create('10:30', '23:00', 30, 'H:i');
             $exclusions = ['15:00', '15:30'];
             $hours = excludeTimes($hours, $exclusions);
